@@ -57,13 +57,13 @@ SELECT * FROM ticket WHERE year(DATE_VENTE)='2014' AND month(DATE_VENTE)='03'
 ### Quelles sont les tickets émis entre les mois de mars et avril 2014 ?
 
 ```mysql
-SELECT NUMERO_TICKET FROM ticket WHERE month(DATE_VENTE) IN (3, 4) AND year(DATE_VENTE)='2014'
+SELECT NUMERO_TICKET FROM tilcket WHERE month(DATE_VENTE) IN (3, 4) AND year(DATE_VENTE)='2014'
 ```
 
 ### Quelles sont les tickets émis au mois de mars et juin 2014 ?
 
 ```mysql
-SELECT DATE_VENTE FROM ticket WHERE month(DATE_VENTE) IN (4, 6) AND year(DATE_VENTE)='2014'
+SELECT NUMERO_TICKET FROM ticket WHERE month(DATE_VENTE) IN (4, 6) AND year(DATE_VENTE)='2014'
 ```
 
 ### Afficher la liste des bières classée par couleur. (Afficher l’id et le nom)
