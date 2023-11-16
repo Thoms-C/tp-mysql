@@ -54,12 +54,22 @@ ORDER BY TOTAL DESC
 ## 17  Donner le C.A. par année.
 
 ```mysql
+SELECT ventes.ANNEE,
+SUM(ventes.QUANTITE * article.PRIX_ACHAT * 1.15) as TOTAL
+from ventes
+INNER JOIN article ON ventes.ID_ARTICLE = article.ID_ARTICLE
+GROUP BY ventes.ANNEE
 ```
 
 ## 18. Lister les quantités vendues de chaque article pour l’année 2016.
 
 ```mysql
-
+SELECT ventes.ANNEE,
+SUM(ventes.QUANTITE * article.PRIX_ACHAT * 1.15) as TOTAL
+from ventes
+INNER JOIN article ON ventes.ID_ARTICLE = article.ID_ARTICLE
+WHERE ventes.ANNEE="2016"
+GROUP BY ventes.ANNEE
 ```
 
 ## 19. Lister les quantités vendues de chaque article pour les années 2014, 2015, 2016.
